@@ -27,20 +27,20 @@ export default function Contact() {
 						<input
 							type='text'
 							placeholder='Your Name'
-							className='bg-gray-700 px-4 py-3 rounded outline-none'
+							className='bg-gray-700 text-dark border px-4 py-3 rounded outline-none'
 							required
 						/>
 						<input
 							type='email'
 							placeholder='Your Email'
-							className='bg-gray-700 px-4 py-3 rounded outline-none'
+							className='bg-gray-700 text-dark border px-4 py-3 rounded outline-none'
 							required
 						/>
 					</div>
 					<textarea
 						placeholder='Your Message'
 						rows={5}
-						className='w-full bg-gray-700 px-4 py-3 rounded outline-none'
+						className='w-full bg-gray-700 text-dark border px-4 py-3 rounded outline-none'
 						required
 					></textarea>
 					<button
