@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface ProjectProps {
@@ -44,7 +43,7 @@ export default function Projects() {
 		>
 			<div className='max-w-6xl mx-auto'>
 				<h2 className='text-3xl md:text-4xl font-bold mb-12 text-center'>
-					Some Things I've Built
+					Some Things I&apos;ve Built
 				</h2>
 
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-8'>

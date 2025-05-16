@@ -22,7 +22,7 @@ export default function About() {
 						<p className='text-lg text-gray-300 leading-relaxed'>
 							I didn’t start out as a developer — I started by fixing things.
 							Back in college, friends would come to me when their laptops
-							froze, apps wouldn't load, or code refused to run. I loved
+							froze, apps wouldn&apos;t load, or code refused to run. I loved
 							figuring out what went wrong — and making it right.
 						</p>
 						<p className='text-lg text-gray-300 leading-relaxed mt-4'>
@@ -33,7 +33,7 @@ export default function About() {
 						<p className='text-lg text-gray-300 leading-relaxed mt-4'>
 							Today, I’m a <strong>full-stack developer</strong> who builds
 							clean, responsive websites for startups, agencies, and
-							entrepreneurs around the world. Whether it's an{" "}
+							entrepreneurs around the world. Whether it&apos;s an{" "}
 							<strong>eCommerce platform</strong>, <strong>social app</strong>,{" "}
 							<strong>blog</strong>, or <strong>LMS</strong>, I deliver clean
 							code, seamless UX, and results that exceed expectations.

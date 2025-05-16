@@ -59,21 +59,21 @@ export default function Contact() {
 						📧 mdsaddamvoltas@gmail.com
 					</a>
 					<a
-						href='https://wa.me/+8801402866937 '
+						href='https://wa.me/+8801402866937'
 						target='_blank'
 						className='hover:text-accent transition'
 					>
 						📱 WhatsApp
 					</a>
 					<a
-						href='https://linkedin.com/in/md-saddam-hosen-ssrgeek/ '
+						href='https://linkedin.com/in/md-saddam-hosen-ssrgeek/'
 						target='_blank'
 						className='hover:text-accent transition'
 					>
 						🔗 LinkedIn
 					</a>
 					<a
-						href='https://github.com/mdsaddamvol '
+						href='https://github.com/mdsaddamvol'
 						target='_blank'
 						className='hover:text-accent transition'
 					>
