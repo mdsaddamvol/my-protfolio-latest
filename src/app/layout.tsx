@@ -6,14 +6,13 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang='en'>
+		<html lang='en' className='dark'>
 			<head>
 				<title>MD Saddam Hosen | Full-Stack Web Developer</title>
 				<meta
 					name='description'
 					content='Portfolio of MD Saddam Hosen, a full-stack web developer specializing in React.js, Next.js, Node.js, Express.js, MongoDB.'
 				/>
-				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</head>
 			<body>{children}</body>

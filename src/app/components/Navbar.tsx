@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
 import ThemeSwitch from "./ThemeSwitch";
+import { useState } from "react";
 
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,48 +11,45 @@ export default function Navbar() {
 		<header className='sticky top-0 z-50 backdrop-blur-md bg-black/30 dark:bg-gray-900/50 border-b border-gray-700'>
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex items-center justify-between h-16'>
-					{/* Logo */}
 					<div className='flex-shrink-0'>
 						<Link href='/' className='text-xl font-bold text-white'>
 							MD SADDAM HOSEN
 						</Link>
 					</div>
 
-					{/* Desktop Navigation */}
 					<nav className='hidden md:flex space-x-8'>
 						<Link
 							href='#about'
-							className='text-gray-300 hover:text-white transition'
+							className='text-gray-300 hover:text-accent transition'
 						>
 							About
 						</Link>
 						<Link
 							href='#skills'
-							className='text-gray-300 hover:text-white transition'
+							className='text-gray-300 hover:text-accent transition'
 						>
 							Skills
 						</Link>
 						<Link
 							href='#projects'
-							className='text-gray-300 hover:text-white transition'
+							className='text-gray-300 hover:text-accent transition'
 						>
 							Projects
 						</Link>
 						<Link
 							href='#services'
-							className='text-gray-300 hover:text-white transition'
+							className='text-gray-300 hover:text-accent transition'
 						>
 							Services
 						</Link>
 						<Link
 							href='#contact'
-							className='text-gray-300 hover:text-white transition'
+							className='text-gray-300 hover:text-accent transition'
 						>
 							Contact
 						</Link>
 					</nav>
 
-					{/* Theme Switcher + Mobile Menu Button */}
 					<div className='flex items-center gap-4'>
 						<ThemeSwitch />
 						<button
@@ -87,41 +84,40 @@ export default function Navbar() {
 					</div>
 				</div>
 
-				{/* Mobile Navigation */}
 				{isMenuOpen && (
-					<nav className='md:hidden py-4 flex flex-col space-y-4'>
+					<nav className='md:hidden py-4 flex flex-col space-y-2'>
 						<Link
 							href='#about'
-							className='text-gray-300 hover:text-white transition py-2 px-4 block'
 							onClick={() => setIsMenuOpen(false)}
+							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							About
 						</Link>
 						<Link
 							href='#skills'
-							className='text-gray-300 hover:text-white transition py-2 px-4 block'
 							onClick={() => setIsMenuOpen(false)}
+							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Skills
 						</Link>
 						<Link
 							href='#projects'
-							className='text-gray-300 hover:text-white transition py-2 px-4 block'
 							onClick={() => setIsMenuOpen(false)}
+							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Projects
 						</Link>
 						<Link
 							href='#services'
-							className='text-gray-300 hover:text-white transition py-2 px-4 block'
 							onClick={() => setIsMenuOpen(false)}
+							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Services
 						</Link>
 						<Link
 							href='#contact'
-							className='text-gray-300 hover:text-white transition py-2 px-4 block'
 							onClick={() => setIsMenuOpen(false)}
+							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Contact
 						</Link>
