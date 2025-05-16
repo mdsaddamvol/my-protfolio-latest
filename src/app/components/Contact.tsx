@@ -9,7 +9,7 @@ export default function Contact() {
 			initial={{ opacity: 0, y: 40 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
-			transition={{ duration: 0.6 }}
+			transition={{ duration: 0.8 }}
 			className='py-20 px-4 md:px-8 bg-gray-800 dark:bg-dark'
 		>
 			<div className='max-w-4xl mx-auto'>

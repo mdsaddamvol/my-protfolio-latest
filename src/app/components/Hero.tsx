@@ -9,28 +9,32 @@ export default function Hero() {
 		<motion.section
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.6 }}
+			transition={{ duration: 0.8 }}
 			className='text-center py-20 px-4 md:px-8'
 		>
 			<div className='max-w-4xl mx-auto'>
-				{/* Name */}
+				<div className='relative inline-block mt-10'>
+					<Image
+						src='/profilepic.jpg'
+						alt='MD Saddam Hosen'
+						width={200}
+						height={200}
+						className='rounded-full border-4 border-accent shadow-xl object-cover'
+					/>
+					<div className='absolute inset-0 rounded-full border-2 border-accent opacity-30 blur-sm'></div>
+				</div>
 				<h1 className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-gray-300 to-accent text-transparent bg-clip-text'>
 					MD SADDAM HOSEN
 				</h1>
-
-				{/* Title */}
 				<p className='text-xl md:text-2xl text-gray-300 mb-6'>
 					Full-Stack Web Developer | Top-Rated Freelancer
 				</p>
-
-				{/* Description */}
 				<p className='text-lg text-gray-400 mb-10 max-w-2xl mx-auto'>
 					Building fast, scalable websites using React.js, Next.js, Node.js,
 					Express.js, and MongoDB. Let’s bring your idea to life with clean code
 					and seamless user experience.
 				</p>
 
-				{/* CTA Buttons */}
 				<div className='flex flex-wrap justify-center gap-4 mb-12'>
 					<Link
 						href='#contact'
@@ -52,18 +56,6 @@ export default function Hero() {
 					>
 						View GitHub
 					</Link>
-				</div>
-
-				{/* Profile Image */}
-				<div className='relative inline-block mt-10'>
-					<Image
-						src='/profilepic.jpg'
-						alt='MD Saddam Hosen'
-						width={200}
-						height={200}
-						className='rounded-full border-4 border-accent shadow-xl object-cover'
-					/>
-					<div className='absolute inset-0 rounded-full border-2 border-accent opacity-30 blur-sm'></div>
 				</div>
 			</div>
 		</motion.section>
