@@ -7,49 +7,73 @@ import { useState } from "react";
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+	// Smooth horizontal scroll to section
+	const scrollToSection = (
+		e: React.MouseEvent<HTMLAnchorElement>,
+		id: string
+	) => {
+		e.preventDefault();
+		const element = document.getElementById(id);
+		if (element) {
+			window.scrollTo({
+				left: element.offsetLeft,
+				top: 0,
+				behavior: "smooth",
+			});
+		}
+	};
+
 	return (
-		<header className='sticky top-0 z-50 backdrop-blur-md bg-black/30 dark:bg-gray-900/50 border-b border-gray-700'>
+		<header className='fixed top-0 left-0 w-full h-20 z-50 backdrop-blur-md bg-black/30 dark:bg-gray-900/50 border-b border-gray-700'>
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex items-center justify-between h-16'>
+					{/* Logo / Name */}
 					<div className='flex-shrink-0'>
 						<Link href='/' className='text-xl font-bold text-white'>
 							MD SADDAM HOSEN
 						</Link>
 					</div>
 
+					{/* Desktop Navigation */}
 					<nav className='hidden md:flex space-x-8'>
-						<Link
+						<a
 							href='#about'
-							className='text-gray-300 hover:text-accent transition'
+							onClick={(e) => scrollToSection(e, "about")}
+							className='text-gray-300 hover:text-accent transition cursor-pointer'
 						>
 							About
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#skills'
-							className='text-gray-300 hover:text-accent transition'
+							onClick={(e) => scrollToSection(e, "skills")}
+							className='text-gray-300 hover:text-accent transition cursor-pointer'
 						>
 							Skills
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#projects'
-							className='text-gray-300 hover:text-accent transition'
+							onClick={(e) => scrollToSection(e, "projects")}
+							className='text-gray-300 hover:text-accent transition cursor-pointer'
 						>
 							Projects
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#services'
-							className='text-gray-300 hover:text-accent transition'
+							onClick={(e) => scrollToSection(e, "services")}
+							className='text-gray-300 hover:text-accent transition cursor-pointer'
 						>
 							Services
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#contact'
-							className='text-gray-300 hover:text-accent transition'
+							onClick={(e) => scrollToSection(e, "contact")}
+							className='text-gray-300 hover:text-accent transition cursor-pointer'
 						>
 							Contact
-						</Link>
+						</a>
 					</nav>
 
+					{/* Mobile Menu Button */}
 					<div className='flex items-center gap-4'>
 						<ThemeSwitch />
 						<button
@@ -84,43 +108,59 @@ export default function Navbar() {
 					</div>
 				</div>
 
+				{/* Mobile Navigation */}
 				{isMenuOpen && (
 					<nav className='md:hidden py-4 flex flex-col space-y-2'>
-						<Link
+						<a
 							href='#about'
-							onClick={() => setIsMenuOpen(false)}
+							onClick={(e) => {
+								scrollToSection(e, "about");
+								setIsMenuOpen(false);
+							}}
 							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							About
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#skills'
-							onClick={() => setIsMenuOpen(false)}
+							onClick={(e) => {
+								scrollToSection(e, "skills");
+								setIsMenuOpen(false);
+							}}
 							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Skills
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#projects'
-							onClick={() => setIsMenuOpen(false)}
+							onClick={(e) => {
+								scrollToSection(e, "projects");
+								setIsMenuOpen(false);
+							}}
 							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Projects
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#services'
-							onClick={() => setIsMenuOpen(false)}
+							onClick={(e) => {
+								scrollToSection(e, "services");
+								setIsMenuOpen(false);
+							}}
 							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Services
-						</Link>
-						<Link
+						</a>
+						<a
 							href='#contact'
-							onClick={() => setIsMenuOpen(false)}
+							onClick={(e) => {
+								scrollToSection(e, "contact");
+								setIsMenuOpen(false);
+							}}
 							className='text-gray-300 hover:text-accent py-2 px-4 block'
 						>
 							Contact
-						</Link>
+						</a>
 					</nav>
 				)}
 			</div>

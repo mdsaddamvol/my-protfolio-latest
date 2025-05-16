@@ -27,14 +27,7 @@ const services = [
 
 export default function Services() {
 	return (
-		<motion.section
-			id='services'
-			initial={{ opacity: 0, y: 40 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true }}
-			transition={{ duration: 0.8 }}
-			className='py-20 px-4 md:px-8'
-		>
+		<section className=' py-20 px-4 md:px-8'>
 			<div className='max-w-5xl mx-auto'>
 				<h2 className='text-3xl md:text-4xl font-bold mb-12 text-center'>
 					How I Can Help You
@@ -51,6 +44,6 @@ export default function Services() {
 					))}
 				</div>
 			</div>
-		</motion.section>
+		</section>
 	);
 }

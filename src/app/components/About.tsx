@@ -5,12 +5,11 @@ import { motion } from "framer-motion";
 export default function About() {
 	return (
 		<motion.section
-			id='about'
 			initial={{ opacity: 0, y: 40 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
 			transition={{ duration: 0.8 }}
-			className='py-20 px-4 md:px-8 bg-gray-800 dark:bg-dark'
+			className='py-20 px-4 md:px-8 bg-gray-900 text-white'
 		>
 			<div className='max-w-5xl mx-auto'>
 				<h2 className='text-3xl md:text-4xl font-bold mb-8 text-center dark:text-light'>

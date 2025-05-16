@@ -1,17 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+
 import Link from "next/link";
+import ResumeDownload from "./ResumeDownload";
 
 export default function Hero() {
 	return (
-		<motion.section
-			initial={{ opacity: 0, y: 20 }}
-			animate={{ opacity: 1, y: 0 }}
-			transition={{ duration: 0.8 }}
-			className='text-center py-20 px-4 md:px-8'
-		>
+		<section className=' text-center py-20 px-4 pt-32 md:px-8'>
 			<div className='max-w-4xl mx-auto'>
 				<div className='relative inline-block mt-10'>
 					<Image
@@ -42,13 +38,7 @@ export default function Hero() {
 					>
 						Hire Me
 					</Link>
-					<a
-						href='/mdsaddamhosen-resume.pdf'
-						download
-						className='border border-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition transform hover:scale-105'
-					>
-						Download Resume
-					</a>
+					<ResumeDownload />
 					<Link
 						href='https://github.com/mdsaddamvol '
 						target='_blank'
@@ -58,6 +48,6 @@ export default function Hero() {
 					</Link>
 				</div>
 			</div>
-		</motion.section>
+		</section>
 	);
 }

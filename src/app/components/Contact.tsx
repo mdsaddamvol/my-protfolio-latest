@@ -1,17 +1,8 @@
 "use client";
 
-import { motion } from "framer-motion";
-
 export default function Contact() {
 	return (
-		<motion.section
-			id='contact'
-			initial={{ opacity: 0, y: 40 }}
-			whileInView={{ opacity: 1, y: 0 }}
-			viewport={{ once: true }}
-			transition={{ duration: 0.8 }}
-			className='py-20 px-4 md:px-8 bg-gray-800 dark:bg-dark'
-		>
+		<section className='py-20 px-4 md:px-8 bg-gray-800 dark:bg-dark'>
 			<div className='max-w-4xl mx-auto'>
 				<h2 className='text-3xl md:text-4xl font-bold mb-12 text-center'>
 					Let’s Work Together
@@ -81,6 +72,6 @@ export default function Contact() {
 					</a>
 				</div>
 			</div>
-		</motion.section>
+		</section>
 	);
 }
