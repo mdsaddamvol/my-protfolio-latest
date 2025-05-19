@@ -7,7 +7,7 @@ import ResumeDownload from "./ResumeDownload";
 
 export default function Hero() {
 	return (
-		<section className=' text-center py-20 px-4 pt-32 md:px-8'>
+		<section className=' text-center  px-4 pt-10 md:px-8'>
 			<div className='max-w-4xl mx-auto'>
 				<div className='relative inline-block mt-10'>
 					<Image

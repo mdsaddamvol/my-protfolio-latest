@@ -7,7 +7,6 @@ import { useState } from "react";
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	// Smooth horizontal scroll to section
 	const scrollToSection = (
 		e: React.MouseEvent<HTMLAnchorElement>,
 		id: string
@@ -15,16 +14,12 @@ export default function Navbar() {
 		e.preventDefault();
 		const element = document.getElementById(id);
 		if (element) {
-			window.scrollTo({
-				left: element.offsetLeft,
-				top: 0,
-				behavior: "smooth",
-			});
+			element.scrollIntoView({ behavior: "smooth", block: "start" });
 		}
 	};
 
 	return (
-		<header className='fixed top-0 left-0 w-full h-20 z-50 backdrop-blur-md bg-black/30 dark:bg-gray-900/50 border-b border-gray-700'>
+		<header className='fixed top-0 left-0 w-full h-15 z-50 backdrop-blur-md bg-black/30 dark:bg-gray-900 dark:bg-dark/50 border-b border-gray-700'>
 			<div className='container mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex items-center justify-between h-16'>
 					{/* Logo / Name */}

@@ -64,7 +64,7 @@ const skills: SkillCategory[] = [
 
 export default function Skills() {
 	return (
-		<section className='py-20 px-4 md:px-8 bg-gray-900'>
+		<section className='py-20 px-4 md:px-8 bg-gray-900 dark:bg-dark'>
 			<div className='max-w-5xl mx-auto'>
 				<motion.h2
 					initial={{ opacity: 0 }}
@@ -79,7 +79,7 @@ export default function Skills() {
 						<motion.div
 							key={index}
 							whileHover={{ scale: 1.02 }}
-							className='bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-xl transition-all'
+							className='bg-gray-800 dark:bg-dark p-6 rounded-lg shadow-md hover:shadow-xl transition-all'
 						>
 							<h3 className='text-xl font-semibold mb-4 flex items-center text-accent'>
 								{group.icon}

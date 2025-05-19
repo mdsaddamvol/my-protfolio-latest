@@ -9,13 +9,6 @@ const config: Config = {
 	],
 	theme: {
 		colors: {
-			primary: "#FFFFFF",
-			secondary: "#1E201E",
-			action: "#FF0000",
-			aprimary: "#FFFFFF",
-			asecondary: "#121621",
-			aaction: "#EB0000",
-			bcollor: "gray",
 			dark: "#0a0a0a",
 			light: "#ffffff",
 			accent: "#00ffcc",
