@@ -64,7 +64,10 @@ const skills: SkillCategory[] = [
 
 export default function Skills() {
 	return (
-		<section className='py-20 px-4 md:px-8 bg-gray-900 dark:bg-dark'>
+		<section
+			id='skills'
+			className='py-20 px-4 md:px-8 bg-gray-900 dark:bg-dark'
+		>
 			<div className='max-w-5xl mx-auto'>
 				<motion.h2
 					initial={{ opacity: 0 }}
