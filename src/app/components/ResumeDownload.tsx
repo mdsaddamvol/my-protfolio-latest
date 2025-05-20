@@ -17,7 +17,7 @@ export default function ResumeDownload() {
 	return (
 		<button
 			onClick={handleDownload}
-			className='border border-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition transform hover:scale-105'
+			className='px-6 py-3 border border-accent text-accent font-medium rounded-lg hover:bg-accent hover:text-dark transition duration-400 ease-in-out-custom'
 		>
 			📄 Download Resume
 		</button>

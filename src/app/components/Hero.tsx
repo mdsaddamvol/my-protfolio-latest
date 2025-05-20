@@ -1,52 +1,54 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
-
 import Link from "next/link";
 import ResumeDownload from "./ResumeDownload";
 
 export default function Hero() {
 	return (
-		<section id='hero' className='text-center px-4 pt-20 md:px-8'>
-			<div className='max-w-4xl mx-auto'>
-				<div className='relative inline-block mt-10'>
-					<Image
-						src='/profilepic.jpg'
-						alt='MD Saddam Hosen'
-						width={200}
-						height={200}
-						className='rounded-full border-4 border-accent shadow-xl object-cover'
-					/>
-					<div className='absolute inset-0 rounded-full border-2 border-accent opacity-30 blur-sm'></div>
-				</div>
-				<h1 className='text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-gray-300 to-accent text-transparent bg-clip-text'>
-					MD SADDAM HOSEN
-				</h1>
-				<p className='text-xl md:text-2xl text-gray-300 mb-6'>
-					Full-Stack Web Developer | Top-Rated Freelancer
-				</p>
-				<p className='text-lg text-gray-400 mb-10 max-w-2xl mx-auto'>
-					Building fast, scalable websites using React.js, Next.js, Node.js,
-					Express.js, and MongoDB. Let’s bring your idea to life with clean code
-					and seamless user experience.
-				</p>
+		<section
+			id='hero'
+			className='relative flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-8 bg-background text-foreground'
+		>
+			{/* Background glow */}
+			<div className='absolute inset-0 -z-10 bg-gradient-radial from-accent/10 via-transparent to-transparent' />
 
-				<div className='flex flex-wrap justify-center gap-4 mb-12'>
-					<Link
-						href='#contact'
-						className='bg-accent text-black px-6 py-3 rounded-lg font-semibold hover:bg-opacity-90 transition transform hover:scale-105'
-					>
-						Hire Me
-					</Link>
-					<ResumeDownload />
-					<Link
-						href='https://github.com/mdsaddamvol '
-						target='_blank'
-						className='border border-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition transform hover:scale-105'
-					>
-						View GitHub
-					</Link>
-				</div>
+			{/* Avatar */}
+			<div className='mb-6'>
+				<Image
+					src='/profilepic.jpg'
+					alt='MD Saddam Hosen'
+					width={120}
+					height={120}
+					className='rounded-full shadow-accent-glow animate-fade-in'
+				/>
+			</div>
+
+			{/* Name and Title */}
+			<h1 className='text-4xl sm:text-5xl font-bold tracking-tight animate-fade-in text-white drop-shadow-lg'>
+				MD Saddam Hosen
+			</h1>
+			<p className='mt-4 text-lg sm:text-xl max-w-xl mx-auto text-gray-300 animate-fade-in'>
+				Full-stack web developer, turning ideas into fast, scalable, and
+				stunning web experiences.
+			</p>
+
+			{/* Call to Action Buttons */}
+			<div className='mt-8 flex flex-wrap gap-4 justify-center animate-fade-in'>
+				<Link
+					href='#contact'
+					className='px-6 py-3 bg-accent text-dark font-medium rounded-lg shadow-accent-glow hover:bg-accent/90 transition duration-400 ease-in-out-custom'
+				>
+					Let’s Work Together
+				</Link>
+				<Link
+					href='#projects'
+					className='px-6 py-3 border border-accent text-accent font-medium rounded-lg hover:bg-accent hover:text-dark transition duration-400 ease-in-out-custom'
+				>
+					View Projects
+				</Link>
+				<ResumeDownload />
 			</div>
 		</section>
 	);

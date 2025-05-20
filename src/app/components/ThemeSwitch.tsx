@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 export default function ThemeSwitch() {
-	const [darkMode, setDarkMode] = useState(false);
+	const [darkMode, setDarkMode] = useState(true);
 
 	useEffect(() => {
 		const savedTheme = localStorage.getItem("theme");

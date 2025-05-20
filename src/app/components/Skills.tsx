@@ -1,22 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaDatabase, FaTools } from "react-icons/fa";
-import { TbApi } from "react-icons/tb";
-import { SiMongodb, SiPostgresql, SiRedis, SiFirebase } from "react-icons/si";
+import { FaReact, FaNodeJs, FaTools } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 
-// Skill Category Interface
 interface SkillCategory {
 	category: string;
 	icon: JSX.Element;
 	items: string[];
 }
 
-// Skills Data from Your CV
 const skills: SkillCategory[] = [
 	{
 		category: "Frontend",
-		icon: <FaReact className='inline-block mr-2 text-accent' />,
+		icon: (
+			<FaReact className='inline-block mr-2 text-accent' aria-hidden='true' />
+		),
 		items: [
 			"JavaScript",
 			"React.js",
@@ -33,7 +32,9 @@ const skills: SkillCategory[] = [
 	},
 	{
 		category: "Backend",
-		icon: <FaNodeJs className='inline-block mr-2 text-accent' />,
+		icon: (
+			<FaNodeJs className='inline-block mr-2 text-accent' aria-hidden='true' />
+		),
 		items: [
 			"Node.js",
 			"Express.js",
@@ -44,12 +45,16 @@ const skills: SkillCategory[] = [
 	},
 	{
 		category: "Databases",
-		icon: <SiMongodb className='inline-block mr-2 text-accent' />,
+		icon: (
+			<SiMongodb className='inline-block mr-2 text-accent' aria-hidden='true' />
+		),
 		items: ["MongoDB", "PostgreSQL", "Firebase", "Redis", "SQL", "Mongoose"],
 	},
 	{
 		category: "Tools & DevOps",
-		icon: <FaTools className='inline-block mr-2 text-accent' />,
+		icon: (
+			<FaTools className='inline-block mr-2 text-accent' aria-hidden='true' />
+		),
 		items: [
 			"Git",
 			"GitHub",
@@ -67,6 +72,7 @@ export default function Skills() {
 		<section
 			id='skills'
 			className='py-20 px-4 md:px-8 bg-gray-900 dark:bg-dark'
+			aria-label='Skills section'
 		>
 			<div className='max-w-5xl mx-auto'>
 				<motion.h2
@@ -82,17 +88,24 @@ export default function Skills() {
 						<motion.div
 							key={index}
 							whileHover={{ scale: 1.02 }}
+							tabIndex={-1}
 							className='bg-gray-800 dark:bg-dark p-6 rounded-lg shadow-md hover:shadow-xl transition-all'
+							aria-labelledby={`skill-category-${index}`}
 						>
-							<h3 className='text-xl font-semibold mb-4 flex items-center text-accent'>
+							<h3
+								id={`skill-category-${index}`}
+								className='text-xl font-semibold mb-4 flex items-center text-accent'
+							>
 								{group.icon}
-								{group.category}
+								<span>{group.category}</span>
 							</h3>
 							<ul className='flex flex-wrap gap-2'>
 								{group.items.map((skill, i) => (
 									<li
 										key={i}
-										className='bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-300 hover:bg-accent hover:text-black transition-all cursor-default'
+										tabIndex={0}
+										className='bg-gray-700 px-3 py-1 rounded-full text-sm text-gray-300 hover:bg-accent hover:text-dark focus:outline-none focus:bg-accent focus:text-dark transition-all cursor-default'
+										aria-label={`Skill: ${skill}`}
 									>
 										{skill}
 									</li>
